@@ -1,0 +1,19 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "isolatedModules": false,
+    "jsx": "react",
+    "target": "ES5",
+    "lib": ["es5", "es6", "dom"],
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "connectedComponents/*": ["src/connectedComponents/*"],
+      "common/*": ["src/common/*"]
+    }
+  },
+  "include": ["./**/*.ts", "./**/*.tsx"]
+}
