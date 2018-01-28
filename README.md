@@ -9,3 +9,4 @@ a react redux appliation to identify painpoints while using typescript.
 - [ ] add tests
 - [ ] styles 
 - [ ] linting
+- [ ] add type to SFC
