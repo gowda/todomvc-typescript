@@ -1,5 +1,5 @@
 {
-  "name": "react-hmr-boilerplate",
+  "name": "react-typescrit-boilerplate",
   "version": "0.0.1",
   "description": "react boiler plate with HMR",
   "main": "index.js",
@@ -9,7 +9,8 @@
   },
   "keywords": [
     "react",
-    "HMR"
+    "typescript",
+    "redux"
   ],
   "author": "",
   "license": "-",
