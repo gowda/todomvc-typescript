@@ -5,13 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
+    "api": "json-server mock-api/db.json --port 4000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "react",
-    "typescript",
-    "redux"
-  ],
+  "keywords": ["react", "typescript", "redux"],
   "author": "",
   "license": "-",
   "dependencies": {
@@ -36,6 +33,7 @@
     "@types/react-dom": "16.0.3",
     "@types/react-redux": "^5.0.14",
     "@types/redux": "^3.6.0",
-    "@types/uuid": "^3.4.3"
+    "@types/uuid": "^3.4.3",
+    "json-server": "0.12.1"
   }
 }
