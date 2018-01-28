@@ -7,3 +7,5 @@ a react redux appliation to identify painpoints while using typescript.
 - [ ] async actions
 - [ ] react router
 - [ ] add tests
+- [ ] styles 
+- [ ] linting
