@@ -1,4 +1,5 @@
-import { Action } from "redux";
+import { Action, Dispatch } from "redux";
+import { ThunkAction } from "redux-thunk";
 
 // app sepcific
 export interface ITodo {
@@ -15,3 +16,5 @@ export interface IReduxAction extends Action {
   type: string;
   [key: string]: any;
 }
+
+export type IDispatch = Dispatch<ThunkAction<any, any, any> | IReduxAction>;
