@@ -1,5 +1,6 @@
 import { Action, combineReducers } from "redux";
 import { ITodo } from "common/interfaces";
+import { RECIEVE_TODOS } from "connectedComponents/list/actions";
 
 interface IReduxAction extends Action {
   type: string;
@@ -16,6 +17,8 @@ const todos = (state: ITodo[] = [], action: IReduxAction) => {
           text: action.text
         }
       ];
+    case RECIEVE_TODOS:
+      return [...state, ...action.todos];
     default:
       return state;
   }

@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import List from "components/list/list";
+import { fetchTodos } from "./actions";
 
 const mapStateToProps = state => {
   return {
@@ -7,4 +8,10 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(List);
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchTodos: () => dispatch(fetchTodos())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);
