@@ -4,12 +4,7 @@ import Input from "connectedComponents/input";
 
 class App extends React.Component<{}, {}> {
   render() {
-    return (
-      <div>
-        <Input />
-        <List />
-      </div>
-    );
+    return [<Input key="input" />, <List key="list" />];
   }
 }
 
