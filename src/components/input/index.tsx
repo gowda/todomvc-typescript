@@ -8,13 +8,12 @@ export interface ITodoInputState {
   value: string;
 }
 
+const initialState: ITodoInputState = {
+  value: ""
+};
+
 class TodoInput extends React.Component<ITodoInputProps, ITodoInputState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: ""
-    };
-  }
+  state = initialState;
 
   onChange = e => {
     this.setState({ value: e.target.value });
