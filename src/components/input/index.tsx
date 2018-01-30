@@ -15,12 +15,12 @@ const initialState: ITodoInputState = {
 class TodoInput extends React.Component<ITodoInputProps, ITodoInputState> {
   state = initialState;
 
-  onChange = e => {
-    this.setState({ value: e.target.value });
+  onChange = (e: React.FormEvent<HTMLInputElement>) => {
+    this.setState({ value: e.currentTarget.value });
   };
 
-  handleSubmit = e => {
-    const text = e.target.value.trim();
+  handleSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const text = e.currentTarget.value.trim();
     if (e.which === 13) {
       this.props.addTodo(text);
     }
