@@ -7,10 +7,6 @@ export interface ITodosListProps extends ITodosList {
 }
 
 class List extends React.Component<ITodosListProps, {}> {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.fetchTodos();
   }

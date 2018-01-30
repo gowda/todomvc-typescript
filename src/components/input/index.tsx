@@ -8,22 +8,26 @@ export interface ITodoInputState {
   value: string;
 }
 
-class TodoInput extends React.Component<ITodoInputProps, ITodoInputState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: ""
-    };
-  }
+const initialState: ITodoInputState = {
+  value: ""
+};
 
-  onChange = e => {
-    this.setState({ value: e.target.value });
+class TodoInput extends React.Component<ITodoInputProps, ITodoInputState> {
+  state = initialState;
+
+  onChange = (e: React.FormEvent<HTMLInputElement>) => {
+    this.setState({ value: e.currentTarget.value });
   };
 
-  handleSubmit = e => {
-    const text = e.target.value.trim();
+  reset() {
+    this.setState(initialState);
+  }
+
+  handleSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const text = e.currentTarget.value.trim();
     if (e.which === 13) {
       this.props.addTodo(text);
+      this.reset();
     }
   };
 
