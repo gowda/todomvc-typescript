@@ -19,10 +19,15 @@ class TodoInput extends React.Component<ITodoInputProps, ITodoInputState> {
     this.setState({ value: e.currentTarget.value });
   };
 
+  reset() {
+    this.setState(initialState);
+  }
+
   handleSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const text = e.currentTarget.value.trim();
     if (e.which === 13) {
       this.props.addTodo(text);
+      this.reset();
     }
   };
 
