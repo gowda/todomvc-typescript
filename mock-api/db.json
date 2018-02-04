@@ -2,15 +2,18 @@
   "todos": [
     {
       "id": "1",
-      "text": "do todo"
+      "text": "do todo",
+      "isDone": false
     },
     {
       "id": "2",
-      "text": "do todo or not to do"
+      "text": "do todo or not to do",
+      "isDone": false
     },
     {
       "id": "3",
-      "text": "ho ho"
+      "text": "ho ho",
+      "isDone": true
     }
   ]
 }

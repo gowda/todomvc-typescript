@@ -5,6 +5,7 @@ import { ThunkAction } from "redux-thunk";
 export interface ITodo {
   id: string;
   text: string;
+  isDone: boolean
 }
 
 export interface ITodosList {
